@@ -1,0 +1,40 @@
+version: '3'
+services:
+  client1:
+    container_name: edge-device_client01
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client01-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client2:
+    container_name: edge-device_client02
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client02-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client3:
+    container_name: edge-device_client03
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client03-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client4:
+    container_name: edge-device_client04
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client04-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+
+
