@@ -60,10 +60,10 @@ RUN git clone https://github.com/intel/metee.git && \
     export METEE_ROOT=./metee 
 
 # Copy your script into the container 
-#COPY build-client.sh /
+COPY generate_keys.sh /
 COPY hawkbit-onboarding.sh /
 # Make the script executable
-#RUN chmod +x /build-client.sh
+RUN chmod +x /generate_keys.sh
 RUN chmod +x /hawkbit-onboarding.sh
 
 # clone the client sdk repo
@@ -100,16 +100,10 @@ RUN cd client-sdk-fidoiot && \
     mkdir -p "/opt/fdo/data" && \
     cp -r "/client-sdk-fidoiot/data/" "/opt/fdo/" && \
     #echo -n "${MANUFACTURER_ADDRESS}" > /opt/fdo/data/manufacturer_addr.bin && \
-    # generate ecdsa384privkey
-    cd /opt/fdo/data/ && \
-    openssl ecparam -name secp384r1 -genkey -noout -out key.pem && \
-    PRIVATE_KEY_HEX=$(openssl asn1parse -inform PEM -in key.pem | grep "OCTET STRING" | awk -F: '{print $NF}' | tr -d '[:space:]') && \
-    echo $PRIVATE_KEY_HEX | xxd -r -p > ecdsa384privkey.dat && \
-    mv key.pem ecdsa384privkey.pem && \
     # generate data backup
     mkdir -p "/opt/fdo/data_bkp" && \
     cp -r "/opt/fdo/data/" "/opt/fdo/data_bkp"
 
 # Build the linux client first && Manufacture the device && watch for hawkbit.config file && Install the device on site
-CMD ["/bin/bash", "-c", "/hawkbit-onboarding.sh && tail -f /dev/null"]
+CMD ["/bin/bash", "-c", "/generate_keys.sh && /hawkbit-onboarding.sh & tail -f /dev/null"]
 

@@ -1,5 +1,6 @@
 secrets/
 *.bin
+*.txt
 .classpath
 *.crt
 *.der

@@ -36,5 +36,148 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - ./client04-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
-
+  client5:
+    container_name: edge-device_client05
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client05-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client6:
+    container_name: edge-device_client06
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client06-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client7:
+    container_name: edge-device_client07
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client07-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client8:
+    container_name: edge-device_client08
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client08-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client9:
+    container_name: edge-device_client09
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client09-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client10:
+    container_name: edge-device_client10
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client10-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client11:
+    container_name: edge-device_client11
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client11-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client12:
+    container_name: edge-device_client12
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client12-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client13:
+    container_name: edge-device_client13
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client13-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client14:
+    container_name: edge-device_client14
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client14-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client15:
+    container_name: edge-device_client15
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client15-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client16:
+    container_name: edge-device_client16
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client16-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client17:
+    container_name: edge-device_client17
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client17-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client18:
+    container_name: edge-device_client18
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client18-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client19:
+    container_name: edge-device_client19
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client19-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
+  client20:
+    container_name: edge-device_client20
+    image: fdo-client-test-304231616:latest
+    build:
+      context: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./client20-manufacturer_sn.bin:/opt/fdo/data/manufacturer_sn.bin
 
