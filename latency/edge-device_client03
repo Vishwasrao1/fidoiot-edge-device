@@ -1,0 +1,6 @@
++ /usr/bin/swupdate -v -k /hb-cert.crt -u -t DEFAULT -x -u https://host.docker.internal -i ec7d182f-4f5d-4e11-b429-54889c815fa6 -k 65db8e15abba9bdb7349a84d9bfffa81
++ /usr/bin/swupdate -v -k /hb-cert.crt -u -t DEFAULT -x -u https://host.docker.internal -i ec7d182f-4f5d-4e11-b429-54889c815fa6 -k 65db8e15abba9bdb7349a84d9bfffa81
+
+real	0m14.210s
+user	0m0.120s
+sys	0m0.036s

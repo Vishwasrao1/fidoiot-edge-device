@@ -59,21 +59,23 @@ RUN git clone https://github.com/intel/metee.git && \
     make install && \
     export METEE_ROOT=./metee 
 
-# Copy your script into the container 
-COPY generate_keys.sh /
-COPY hawkbit-onboarding.sh /
-# Make the script executable
-RUN chmod +x /generate_keys.sh
-RUN chmod +x /hawkbit-onboarding.sh
-
 # clone the client sdk repo
 RUN git clone https://github.com/Vishwasrao1/client-sdk-fidoiot.git
+
+# Copy your script into the container 
+COPY generate_keys.sh /
+
+
+# Make the script executable
+RUN chmod +x /generate_keys.sh
 
 # Add dummy certificate and a ecdsa384privkey
 COPY hb-cert.crt /
 
 #install xxd
 RUN apt-get install -y vim-common
+
+
 
 #Build linux-client
 
@@ -105,5 +107,5 @@ RUN cd client-sdk-fidoiot && \
     cp -r "/opt/fdo/data/" "/opt/fdo/data_bkp"
 
 # Build the linux client first && Manufacture the device && watch for hawkbit.config file && Install the device on site
-CMD ["/bin/bash", "-c", "/generate_keys.sh && /hawkbit-onboarding.sh & tail -f /dev/null"]
+CMD ["/bin/bash", "-c", "/generate_keys.sh & tail -f /dev/null"]
 
