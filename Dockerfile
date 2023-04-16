@@ -59,12 +59,8 @@ RUN git clone https://github.com/intel/metee.git && \
     make install && \
     export METEE_ROOT=./metee 
 
-# clone the client sdk repo
-RUN git clone https://github.com/Vishwasrao1/client-sdk-fidoiot.git
-
 # Copy your script into the container 
 COPY generate_keys.sh /
-
 
 # Make the script executable
 RUN chmod +x /generate_keys.sh
@@ -74,6 +70,8 @@ COPY hb-cert.crt /
 
 #install xxd
 RUN apt-get install -y vim-common
+# clone the client sdk repo
+RUN git clone --depth 1 https://github.com/Vishwasrao1/client-sdk-fidoiot.git
 
 
 
