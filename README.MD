@@ -3,9 +3,9 @@ It is assumed that the host machine already has docker engine along with docker-
 
 ### Step 1 : Generate serial numbers for each edge-device-client
 Run below script to generate as many serial numbers you want, intially we have kept the number to 10 devices. 
-'''console
+```console
 $bash serial_number_generator.sh
-'''
+```
 
 ### Step 2 : Run docker-compose
 '''
