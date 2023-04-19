@@ -3,8 +3,8 @@ It is assumed that the host machine already has docker engine along with docker-
 
 ### Step 1 : Generate serial numbers for each edge-device-client
 Run below script to generate as many serial numbers you want, intially we have kept the number to 10 devices. 
-'''
-bash serial_number_generator.sh
+'''console
+$bash serial_number_generator.sh
 '''
 
 ### Step 2 : Run docker-compose
@@ -68,7 +68,7 @@ Device onboarded successfully.
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 '''
 
-To simulate the onboarding nce again you can stop the running containers of edge device client and run below command to recreate them with new credentials.
+To simulate the onboarding once again you can stop the running containers of edge device client and run below command to recreate them with new credentials.
 '''
 docker-compose up --force-recreate --build
 '''
