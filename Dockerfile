@@ -1,7 +1,7 @@
 FROM debian:bullseye
 
-#Set Manufacturer Address
-ENV MANUFACTURER_ADDRESS="http://10.149.170.203:8039"
+#Set Manufacturer Address incase of not using host.docker.internal
+#ENV MANUFACTURER_ADDRESS="http://10.149.170.203:8039"
 
 # install dependencies
 RUN apt-get update && \
@@ -104,6 +104,6 @@ RUN cd client-sdk-fidoiot && \
     mkdir -p "/opt/fdo/data_bkp" && \
     cp -r "/opt/fdo/data/" "/opt/fdo/data_bkp"
 
-# Build the linux client first && Manufacture the device && watch for hawkbit.config file && Install the device on site
+# Build the linux client first && generate ecdsa keys
 CMD ["/bin/bash", "-c", "/generate_keys.sh & tail -f /dev/null"]
 
