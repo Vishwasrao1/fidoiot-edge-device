@@ -1,4 +1,6 @@
 secrets/
+latency/
+.log
 *.bin
 *.txt
 .classpath
