@@ -1,7 +1,7 @@
 FROM debian:bullseye
 
 #Set Manufacturer Address incase of not using host.docker.internal
-#ENV MANUFACTURER_ADDRESS="http://10.149.170.203:8039"
+#ENV MANUFACTURER_ADDRESS="http://10.111.111.111:8039"
 
 # install dependencies
 RUN apt-get update && \
